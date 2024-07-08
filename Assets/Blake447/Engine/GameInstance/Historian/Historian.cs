@@ -75,7 +75,7 @@ public class Historian : MonoBehaviour
     //}
 
 
-    public UIWidgets.ListViewString listViewString;
+    //public UIWidgets.ListViewString listViewString;
     public void OnGameStateChanged(int[] players_joined, int[] player_types, bool inProgress)
     {
         if (librarian != null)
@@ -112,12 +112,12 @@ public class Historian : MonoBehaviour
 
     public void SetListView(History history)
     {
-        if (listViewString != null && history != null)
+        if (/*listViewString != null &&*/ history != null)
         {
-            listViewString.DataSource.Clear();
+            //listViewString.DataSource.Clear();
             string[] strings = history.HistoryStrings();
-            for (int i = 0; strings != null && i < strings.Length; i++)
-                listViewString.DataSource.Add(strings[i]);
+            //for (int i = 0; strings != null && i < strings.Length; i++)
+                //listViewString.DataSource.Add(strings[i]);
         }
     }
 

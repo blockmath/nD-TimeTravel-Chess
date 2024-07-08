@@ -4,8 +4,8 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class PrimaryMenu : MonoBehaviour
 {
-    public UIWidgets.Custom.DataTypeGameModeNS.ListViewDataTypeGameMode gamemodeList;
-    public GameObject persistant;
+    //public UIWidgets.Custom.DataTypeGameModeNS.ListViewDataTypeGameMode gamemodeList;
+    public GameObject persistent;
     public GameObject toggled;
     public GameObject MainMenu;
     public GameObject GameMenu;
@@ -66,7 +66,7 @@ public class PrimaryMenu : MonoBehaviour
             gamedata.type = "chess";
             gamedata.multiverse = gamemode.isTimeTravel ? "MV Time" : "Singularity";
             gamedata.players = 2;
-            gamemodeList.Add(gamedata);
+            //gamemodeList.Add(gamedata);
         }
     }
     // Toggle the menu
@@ -174,7 +174,7 @@ public class PrimaryMenu : MonoBehaviour
         useForwardLateralSelected = userForwardLateral;
     }
     // Get and set selected game mode
-    public void SetSelectedGameMode(int gamemode, UIWidgets.ListViewItem item)
+    public void SetSelectedGameMode(int gamemode)
     {
         selectedGameMode = gamemode;
         if (widgetController != null)
@@ -196,7 +196,7 @@ public class PrimaryMenu : MonoBehaviour
 
 
         }
-        for (int i = 1; i < 5; i++)
+        /*for (int i = 1; i < 5; i++)
         {
             GameObject textRoot = GameInfoRoot.transform.GetChild(i).gameObject;
             GameObject text = textRoot.transform.GetChild(0).gameObject;
@@ -220,7 +220,7 @@ public class PrimaryMenu : MonoBehaviour
                 default:
                     break;
             }
-        }
+        }*/
     }
     public int GetSelectedGameMode()
     {
